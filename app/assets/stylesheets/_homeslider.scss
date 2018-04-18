@@ -1,0 +1,138 @@
+
+ *, *:after, *:before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+ #curtain {
+    background: #000;
+    opacity: 0.95;
+}
+
+#curtain {
+
+	width: 100%;
+
+    
+    
+    position:relative;
+}
+
+.slider-controls 
+{	
+}
+//NEXT/PREVIOUS BUTTONS 
+@media (min-width: 1201px) {
+  .static {
+  margin: 25px;
+  }
+  #curtain {
+  height: 95%;
+  }
+
+  .bottom-left, .bottom-right, .bottom-center {
+    bottom: 20%;
+    z-index: 4545;
+  }
+  .bottom-right {
+    right:50px;
+}
+.bottom-left {
+    left: 50px;
+   
+}
+.static {
+       position: absolute;
+    z-index: 8;
+}
+}
+//NEXT/PREVIOUS BUTTONS 
+@media (max-width: 1200px) {
+
+  #curtain {
+  height: 95%;
+  }
+  .static {
+  margin: 0px;
+  position: static;
+  }
+  .bottom-left, .bottom-right, .bottom-center {
+    bottom: 30%;
+    z-index: 4545;
+  }
+  .bottom-right {
+    right:20px;
+}
+.bottom-left {
+    left: 20px;
+   
+}
+.static {
+       position: static;
+    z-index: 8;
+}
+}
+//NEXT/PREVIOUS BUTTONS 
+@media (max-width: 800px) {
+
+  #curtain {
+  height: 95%;
+  }
+
+  .bottom-left, .bottom-right, .bottom-center {
+    bottom: 30%;
+    z-index: 4545;
+  }
+  .bottom-right {
+    right:20px;
+}
+.bottom-left {
+    left: 20px;
+   
+}
+.static {
+       position: static;
+    z-index: 8;
+}
+}
+//NEXT/PREVIOUS BUTTONS 
+@media (max-width: 600px) {
+
+  #curtain {
+  height: 80%;
+  }
+
+  .bottom-left, .bottom-right, .bottom-center {
+    bottom: 30%;
+  }
+  .bottom-right {
+    right:20px;
+}
+.bottom-left {
+    left: 20px;
+   
+}
+
+.bottom-center 
+{
+    position: absolute;
+    bottom: 30%;
+    
+    z-index: 4545;
+}
+
+.slider-controls {
+	 width: 62px;
+  height: 28px;
+  object-fit: contain;
+}
+#playpause {
+	 width: 36px;
+  height: 36px;
+}
+.centered {
+	position: absolute;
+	z-index:9999;
+}
+}

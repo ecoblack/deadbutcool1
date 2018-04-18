@@ -1,0 +1,399 @@
+@import 'header';
+@import 'footer';
+@import 'works';
+@import 'home';
+@import 'homeslider';
+@import 'player';
+@import 'marquee';
+@import 'project';
+
+/* Fonts */
+
+
+
+
+@font-face {
+  font-family: 'Canela-Light';
+  src: font-url("Canela-Light.otf");
+  src: font-url("Canela-Light.otf?#iefix") format("embedded-opentype"), font-url("Canela-Light.woff") format("woff"), font-url("Canela-Light.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Favorit_Regular';
+  src: font-url("Favorit_Regular.otf");
+  src: font-url("Favorit_Regular.otf?#iefix") format("embedded-opentype"), font-url("Favorit_Regular.woff") format("woff"), font-url("Favorit_Regular.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Universal */
+
+ @mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 2550px) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 1500px) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 1200px) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 551px)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 550px)  { @content ; }
+
+  }
+}
+
+/* D E S K T O P */
+@include breakpoint(desktop) {
+body, #header {
+  
+  width: 70%;
+  margin:auto!important;
+}
+
+#deskmenu a {
+  font-size:27px;
+  
+  }
+  
+  .mainandtel {
+  width: 50%;
+  margin:auto;
+  margin-bottom: 50px;
+  }
+  .independent {
+      width: 65%;
+  }
+  #maincontent {
+    padding-top:10%;
+   margin: 0px 50px;
+  }
+
+.info {
+  column-width: 900px;
+  
+}
+ #footer {
+  margin-left: 50px;
+  }
+}
+/* L A P T O P */
+@include breakpoint(laptop) {
+ .slider-wrap {
+ padding-top:50px;
+ }
+
+.info {
+  column-width: 714px;
+  
+}
+#footer {
+  margin-left: 50px;
+  }
+
+}
+/* T A B L E T */
+@include breakpoint(tablet) {
+  li a {
+   
+    padding-left:50px;
+    padding-bottom:0px;
+    padding-top:40px;
+  }
+  #header {
+  height: 100px;
+  }
+
+  #deskmenu {
+  margin-right:40px;
+  }
+   .next-project, .prev-project {
+  display: block;
+  }
+ h1 {
+    font-size: 60px;
+  }
+  p {
+    font-size: 24px;
+  }
+  #header a {
+    font-size: 27px;
+  }
+  .mailandtel {
+    width:60%;
+    margin:auto;
+
+  }
+  #maincontent {
+   min-height: calc(100vh - 50px);
+   padding-top: 200px;
+   margin: 0 50px;
+   }
+
+.grid {
+        margin-left: 20px;
+    margin-right: 20px;
+}
+.static-info {
+padding-top:75px;
+  margin: 40px 30px;
+}
+
+
+  .imgcontent {
+  padding-top: 120px;
+  margin-left: -10px;
+  margin-right: -10px;
+  }
+  
+ 
+.info {
+  column-width: 600px;
+  
+}
+  
+#footer {
+  margin-left: 50px;
+  }
+
+}
+/* M O B I L E P L U S*/
+@include breakpoint(phablet) {
+
+  .mailandtel {
+    
+  }
+  h1 {
+    font-size: 60px;
+  }
+  p {
+    font-size: 24px;
+  }
+  .info p {
+    margin-right: 100px;
+  }
+  .content {
+      
+  }
+
+    #maincontent {
+   min-height: calc(75vh - 50px);
+   padding-top: 75px;
+   margin: 0px 20px;
+ }
+
+.top-left {
+    position: absolute;
+    top: 8px;color:red;
+    left: 16px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;color:red;
+    right: 16px;
+}
+
+.centered {
+    z-index:1488;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: none;
+}
+
+
+}
+/* M O B I L E */
+
+@include breakpoint(mobileonly) {
+ h1 {
+    font-size: 34px;
+  }
+  p {
+    font-size: 19px;
+  }
+  .content {
+      
+  }
+  .mailandtel {
+    width:100%;
+  }
+  #project_slide {
+  display:none!important;
+}
+
+
+
+
+#maincontent {
+   min-height: calc(75vh - 50px);
+   padding-top: 70px;
+   margin: 0px 20px;
+ 
+}
+.static {
+  position: static;
+
+}
+
+.centered p {
+  font-size: 13px;
+}
+
+#control-img {
+   width: 62px;
+  height: 29px;
+}
+#playpause {
+    width: 36px;
+  height: 36px;
+}
+.slider-controls {
+width: 62px;
+  height: 36px;
+  }
+  .bottom-left {
+    position: absolute;
+   
+    left: 20px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;color:red;
+    left: 16px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;color:red;
+    right: 16px;
+}
+
+
+.bottom-center {
+    position: absolute;
+    
+    left:48%;
+    float:left;
+}
+.centered {
+
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    transform: none;
+}
+#footer {
+  margin-left: 20px;
+  }
+}
+
+html {
+  min-height: 1000px;
+    background-color: #000000;
+    z-index:1;
+}
+
+body {
+  min-height:100%;
+  margin-top: 100px;
+  margin: 0px;
+  padding: 0px;
+ 
+}
+
+a {
+  color:white;
+  font-family: "Canela-Light";
+  font-size: 19px;
+  text-decoration:none;
+  -webkit-font-smoothing: antialiased;
+  &:hover {
+  text-decoration:underline;
+  
+  }
+}
+
+h1 {
+  overflow-wrap: break-word;
+  line-height: 1;
+  color:white;
+  font-weight: 100;
+  text-align: left;
+  font-family: "Favorit_Regular";
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  margin-top: 0;
+  line-height: 1;
+  color: white;
+  font-family: "Favorit_Regular";
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+@include breakpoint(laptop) {
+  .content  {
+         margin-top: 100px;
+  }
+}
+
+
+#contactus {
+  display:inline-block;
+}
+
+
+
+html.modal-open {
+     overflow-y: hidden;
+}
+
+ .independent {
+    width: 65%;
+  }
+.current {
+  text-decoration:underline!important;
+}
+
+#welcome {
+  width: 66%;
+  }
+
+.someClass {
+/*  min-height:800px;*/
+}
+
+ /*.bx-controls {
+  display: none!important;
+  }
+*/
+
+  .hide {
+    display: none;
+}
+
+
+.brandlink p {
+  font-size: 60px;
+}
+
+.prev-next-container a {
+  font-family: Favorit_Regular;
+
+}
+.prev-next-container a:hover {
+text-decoration:none!important;
+}
